@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Integrated Visual IDE</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+
+  <div class="ide-container">
+    <header class="ide-header">
+      <div class="window-buttons">
+        <span class="dot close"></span>
+        <span class="dot minimize"></span>
+        <span class="dot expand"></span>
+      </div>
+      <div class="current-file">visual_preview.mode</div>
+    </header>
+
+    <div class="ide-body">
+      <aside class="ide-sidebar">
+        <div class="sidebar-content">
+          <div class="folder-name">▼ GENSHIN-PROJECT</div>
+        </div>
+      </aside>
+
+      <main class="ide-editor">
+        <div class="editor-tabs">
+          <div class="tab active">Image Preview</div>
+        </div>
+        
+        <div class="editor-content">
+          <div class="full-image-container">
+            <div class="slideshow">
+              <img src="./myImg/img1.webp" alt="Slide 1">
+              <img src="./myImg/img2.webp" alt="Slide 2">
+            </div>
+          </div>
+        </div>
+      </main>
+
+      <aside id="online-users-sidebar" class="right-sidebar">
+        <div class="section-title">ONLINE USERS</div>
+        <ul class="file-list" id="online-users"></ul>
+      </aside>
+    </div>
+
+    <footer class="ide-terminal">
+      <div class="terminal-body">
+        <div id="comment-list" class="log-container"></div>
+        <div class="input-line">
+          <span class="prompt">&gt;</span>
+          <input type="text" id="comment-input" placeholder="메시지를 입력하세요...">
+          <button id="add-comment-btn">EXECUTE</button>
+        </div>
+      </div>
+    </footer>
+
+    <div class="ide-statusbar">
+      <div class="status-left">Visual Mode Active</div>
+      <div class="status-right">UTF-8 | UI</div>
+    </div>
+  </div>
+
+  <script src="scripts.js"></script>
+</body>
+</html>
